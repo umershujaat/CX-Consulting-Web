@@ -49,7 +49,7 @@ export const siteConfig = {
   principals: {
     umer: {
       name: "Umer Rabbani",
-      title: "Principal, AI Contact Center & Product Advisory",
+      title: "Director of Product Agentic Applications",
       linkedIn: "https://www.linkedin.com/in/umer-rabbani/",
       imageSrc: "/images/umer-rabbani.jpg",
       imageAlt: "Professional headshot of Umer Rabbani",

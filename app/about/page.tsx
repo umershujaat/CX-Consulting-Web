@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Umer Rabbani and Deepak Dutta—senior operators advising enterprises on AI contact centers, conversational AI, and agentic workflows.",
+    "Meet Umer Rabbani and Deepak Dutta—MBA-trained operators with technical backgrounds and years of industry experience advising enterprises on AI contact centers, conversational AI, and agentic workflows.",
   alternates: { canonical: "/about" },
 };
 

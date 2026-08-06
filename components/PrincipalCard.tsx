@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { principalProfiles } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 type PrincipalCardProps = {
@@ -91,12 +92,14 @@ export function PrincipalCard({
 
 export function PrincipalsFromConfig() {
   const { umer, deepak } = siteConfig.principals;
+  const umerProfile = principalProfiles.find((p) => p.id === "umer")!;
+  const deepakProfile = principalProfiles.find((p) => p.id === "deepak")!;
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <PrincipalCard
         name={umer.name}
         title={umer.title}
-        bio="Umer is a product executive with 13+ years of experience across enterprise SaaS, customer-service AI, voice AI, and cloud contact centers. His experience includes building and scaling platforms at Salesforce, Five9, Genesys, and Uniphore; designing AI evaluation frameworks; and taking enterprise voice and agentic workflows from use-case definition through pilot and production readiness."
+        bio={umerProfile.bio}
         linkedIn={umer.linkedIn}
         imageSrc={umer.imageSrc}
         imageAlt={umer.imageAlt}
@@ -106,7 +109,7 @@ export function PrincipalsFromConfig() {
       <PrincipalCard
         name={deepak.name}
         title={deepak.title}
-        bio="Deepak is an enterprise product and customer-engagement executive with more than 25 years of experience. At Meta, he worked across Business Messaging, real-time communications, conversational AI, and agentic business experiences supporting interactions at global scale. His experience also includes leading enterprise AI application portfolios and connecting customer experience, messaging, data, and workflow execution."
+        bio={deepakProfile.bio}
         linkedIn={deepak.linkedIn}
         imageSrc={deepak.imageSrc}
         imageAlt={deepak.imageAlt}

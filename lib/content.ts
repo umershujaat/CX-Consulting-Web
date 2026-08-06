@@ -360,15 +360,15 @@ export const approachPage = {
 
 export const aboutPage = {
   jointStatement:
-    "We built this advisory practice because enterprise AI contact-center and agentic programs stall for predictable reasons: unclear use cases, vendor demos that do not transfer to production, evaluations that miss edge cases, commercial models that hide true cost, and governance that arrives too late. We work as senior operators—directly involved—to help buyers make defensible decisions from strategy through production readiness.",
+    "We built this advisory practice because enterprise AI contact-center and agentic programs stall for predictable reasons: unclear use cases, vendor demos that do not transfer to production, evaluations that miss edge cases, commercial models that hide true cost, and governance that arrives too late. We work as senior operators—directly involved—to help buyers make defensible decisions from strategy through production readiness. Both Umer and Deepak hold MBAs from UC Berkeley and Cornell, bring technical backgrounds, and have years of industry experience across enterprise AI and customer experience.",
 };
 
 export const principalProfiles: PrincipalProfile[] = [
   {
     id: "umer",
     name: "Umer Rabbani",
-    title: "Principal, AI Contact Center & Product Advisory",
-    bio: "Umer is a product executive with 13+ years of experience across enterprise SaaS, customer-service AI, voice AI, and cloud contact centers. His experience includes building and scaling platforms at Salesforce, Five9, Genesys, and Uniphore; designing AI evaluation frameworks; and taking enterprise voice and agentic workflows from use-case definition through pilot and production readiness.",
+    title: "Director of Product Agentic Applications",
+    bio: "Umer is a product executive with a technical background and 13+ years of industry experience across enterprise SaaS, customer-service AI, voice AI, and cloud contact centers. His experience includes building and scaling platforms at Salesforce, Five9, Genesys, and Uniphore; designing AI evaluation frameworks; and taking enterprise voice and agentic workflows from use-case definition through pilot and production readiness.",
     areasOfDepth: [
       "AI contact centers and voice AI",
       "AI evaluations and production telemetry",
@@ -378,14 +378,14 @@ export const principalProfiles: PrincipalProfile[] = [
       "Reliability, global voice compliance, and enterprise integrations",
     ],
     experienceSummary:
-      "Product leadership across Salesforce, Five9, Genesys, and Uniphore spanning contact-center platforms, voice AI, evaluations, and production readiness.",
+      "MBA (UC Berkeley / Cornell). Product leadership across Salesforce, Five9, Genesys, and Uniphore spanning contact-center platforms, voice AI, evaluations, and production readiness.",
     linkedIn: "https://www.linkedin.com/in/umer-rabbani/",
   },
   {
     id: "deepak",
     name: "Deepak Dutta",
     title: "General Manager & Global Vice President",
-    bio: "Deepak is an enterprise product and customer-engagement executive with more than 25 years of experience. At Meta, he worked across Business Messaging, real-time communications, conversational AI, and agentic business experiences supporting interactions at global scale. His experience also includes leading enterprise AI application portfolios and connecting customer experience, messaging, data, and workflow execution.",
+    bio: "Deepak is an enterprise product and customer-engagement executive with a technical background and more than 25 years of industry experience. At Meta, he worked across Business Messaging, real-time communications, conversational AI, and agentic business experiences supporting interactions at global scale. His experience also includes leading enterprise AI application portfolios and connecting customer experience, messaging, data, and workflow execution.",
     areasOfDepth: [
       "Enterprise and conversational AI strategy",
       "Agentic applications and customer engagement",
@@ -395,7 +395,7 @@ export const principalProfiles: PrincipalProfile[] = [
       "AI platform and workflow ecosystems",
     ],
     experienceSummary:
-      "Enterprise product and customer-engagement leadership including Meta work across messaging, real-time communications, conversational AI, and agentic experiences.",
+      "MBA (UC Berkeley / Cornell). Enterprise product and customer-engagement leadership including Meta work across messaging, real-time communications, conversational AI, and agentic experiences.",
     linkedIn: "https://www.linkedin.com/in/deepakdutta1/",
   },
 ];
