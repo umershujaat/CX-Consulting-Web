@@ -4,7 +4,29 @@ Enterprise advisory website for AI contact centers, conversational AI, and agent
 
 Working brand name lives in `lib/site.ts` so it can be changed in one place.
 
-## Local development
+## Publishing insights (blog)
+
+Add a Markdown file under `content/insights/` with front matter:
+
+```yaml
+title: "Article title"
+slug: "article-slug"
+description: "Search and social summary"
+date: "2026-08-06"
+updated: "2026-08-06"
+author: "umer-rabbani" # or deepak-dutta
+category: "AI Evaluations"
+tags:
+  - "Voice AI"
+featured: false
+draft: true
+```
+
+- Set `draft: false` to publish.
+- Drafts never appear in production builds, sitemap, or RSS.
+- Index: `/insights` (also `/blog` redirects here)
+- Article: `/insights/[slug]`
+- RSS: `/insights/rss.xml`
 
 ```bash
 npm install

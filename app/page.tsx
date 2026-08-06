@@ -3,6 +3,7 @@ import { ApproachSteps } from "@/components/ApproachSteps";
 import { Button } from "@/components/Button";
 import { CtaBand } from "@/components/CtaBand";
 import { EvaluationMatrix } from "@/components/EvaluationMatrix";
+import { InsightCard } from "@/components/InsightCard";
 import { PrincipalsFromConfig } from "@/components/PrincipalCard";
 import { ProblemCard } from "@/components/ProblemCard";
 import { Section } from "@/components/Section";
@@ -15,10 +16,10 @@ import {
   engagementModels,
   engagementNote,
   evaluationDimensions,
-  insightSeedTitles,
   problems,
   servicesSummary,
 } from "@/lib/content";
+import { getPublishedInsights } from "@/lib/insights";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -32,6 +33,8 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const latestInsights = getPublishedInsights().slice(0, 3);
+
   return (
     <>
       <section className="relative overflow-hidden bg-navy text-white">
@@ -153,28 +156,30 @@ export default function HomePage() {
 
       <Section
         title="Insights"
-        description="Practical writing on RFPs, evaluations, voice AI, and production readiness is on the way."
+        description="Practical writing on RFPs, evaluations, voice AI, and production readiness."
         tone="muted"
       >
-        <div className="rounded-lg border border-dashed border-navy/20 bg-white p-6 sm:p-8">
-          <p className="text-base font-semibold text-navy">
-            Insights are coming soon
-          </p>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate sm:text-base">
-            We will publish original articles here. Until then, here are topics
-            we are preparing—not published pieces:
-          </p>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate">
-            {insightSeedTitles.slice(0, 3).map((title) => (
-              <li key={title}>{title}</li>
+        {latestInsights.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-navy/20 bg-white p-6 sm:p-8">
+            <p className="text-base font-semibold text-navy">
+              Insights are coming soon
+            </p>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate sm:text-base">
+              Published articles will appear here automatically.
+            </p>
+          </div>
+        ) : (
+          <div className="grid gap-4 md:grid-cols-3">
+            {latestInsights.map((article) => (
+              <InsightCard key={article.slug} article={article} />
             ))}
-          </ul>
-          <p className="mt-6">
-            <Button href="/insights" variant="ghost">
-              Visit Insights
-            </Button>
-          </p>
-        </div>
+          </div>
+        )}
+        <p className="mt-6">
+          <Button href="/insights" variant="ghost">
+            View all insights
+          </Button>
+        </p>
       </Section>
 
       <CtaBand />

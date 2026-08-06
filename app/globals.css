@@ -69,3 +69,101 @@ body {
   outline: 2px solid var(--teal);
   outline-offset: 2px;
 }
+
+.insight-prose {
+  color: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.insight-prose > * + * {
+  margin-top: 1.15rem;
+}
+
+.insight-prose h2 {
+  margin-top: 2.25rem;
+  color: var(--navy);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.insight-prose h3 {
+  margin-top: 1.75rem;
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.insight-prose p,
+.insight-prose li {
+  color: var(--slate);
+}
+
+.insight-prose a {
+  color: var(--teal);
+  font-weight: 600;
+  text-underline-offset: 2px;
+}
+
+.insight-prose a:hover {
+  text-decoration: underline;
+}
+
+.insight-prose ul,
+.insight-prose ol {
+  padding-left: 1.25rem;
+}
+
+.insight-prose ul {
+  list-style: disc;
+}
+
+.insight-prose ol {
+  list-style: decimal;
+}
+
+.insight-prose li + li {
+  margin-top: 0.4rem;
+}
+
+.insight-prose strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.insight-prose blockquote {
+  border-left: 3px solid var(--cyan);
+  padding-left: 1rem;
+  color: var(--slate);
+  font-style: italic;
+}
+
+.insight-prose code {
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--off-white) 70%, white);
+  padding: 0.1rem 0.35rem;
+  font-size: 0.92em;
+}
+
+.insight-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.insight-prose th,
+.insight-prose td {
+  border: 1px solid color-mix(in srgb, var(--navy) 12%, white);
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.insight-prose th {
+  background: var(--navy);
+  color: white;
+}
+

@@ -1,47 +1,57 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { CtaBand } from "@/components/CtaBand";
+import { InsightsIndex } from "@/components/InsightsIndex";
 import { Section } from "@/components/Section";
-import { insightSeedTitles } from "@/lib/content";
+import { getPublishedInsights } from "@/lib/insights";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Insights",
   description:
-    "Practical insights on enterprise AI contact centers, evaluations, voice AI, and agentic workflows—coming soon.",
+    "Practical articles on enterprise AI contact centers, evaluations, voice AI, RFPs, and agentic workflows.",
   alternates: { canonical: "/insights" },
 };
 
 export default function InsightsPage() {
+  const articles = getPublishedInsights();
+
   return (
     <>
       <Section
         eyebrow="Insights"
-        title="Insights are coming soon"
-        description="We will publish original, practical articles here. Empty or fabricated posts will never appear on this site."
+        title="Practical guidance for enterprise AI decisions"
+        description={`Original writing from ${siteConfig.brandName} on RFPs, evaluations, voice AI, commercial design, and production readiness.`}
       >
-        <div className="rounded-lg border border-dashed border-navy/20 bg-white p-6 sm:p-10">
-          <p className="text-base leading-relaxed text-slate sm:text-lg">
-            Topics in preparation for {siteConfig.brandName}:
-          </p>
-          <ol className="mt-6 list-decimal space-y-3 pl-5 text-sm text-body sm:text-base">
-            {insightSeedTitles.map((title) => (
-              <li key={title} className="pl-1">
-                {title}
-              </li>
-            ))}
-          </ol>
-          <p className="mt-8 text-sm text-slate">
-            Prefer a conversation now?{" "}
-            <a
-              href="/contact"
-              className="font-semibold text-teal underline-offset-2 hover:underline"
-            >
-              {siteConfig.cta.article}
-            </a>
-          </p>
-        </div>
+        {articles.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-navy/20 bg-white p-6 sm:p-10">
+            <p className="text-base font-semibold text-navy">
+              Insights are coming soon
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate sm:text-base">
+              Published articles will appear here automatically. Drafts never
+              render in production.
+            </p>
+          </div>
+        ) : (
+          <Suspense fallback={<p className="text-slate">Loading articles…</p>}>
+            <InsightsIndex articles={articles} />
+          </Suspense>
+        )}
+        <p className="mt-8 text-sm text-slate">
+          Prefer RSS?{" "}
+          <a
+            href="/insights/rss.xml"
+            className="font-semibold text-teal underline-offset-2 hover:underline"
+          >
+            Subscribe to the feed
+          </a>
+        </p>
       </Section>
-      <CtaBand />
+      <CtaBand
+        heading="Discuss your AI program"
+        body="Tell us what you are evaluating and where the decision is blocked."
+      />
     </>
   );
 }
