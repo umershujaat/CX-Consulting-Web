@@ -9,7 +9,7 @@ export async function GET() {
 
   const items = articles
     .map((article) => {
-      const link = `${base}/insights/${article.slug}`;
+      const link = `${base}/blog/${article.slug}`;
       return `
     <item>
       <title><![CDATA[${article.title}]]></title>
@@ -25,8 +25,8 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title><![CDATA[${siteConfig.brandName} Insights]]></title>
-    <link>${base}/insights</link>
+    <title><![CDATA[${siteConfig.brandName} Blog]]></title>
+    <link>${base}/blog</link>
     <description><![CDATA[${siteConfig.social.description}]]></description>
     <language>en-us</language>
 ${items}

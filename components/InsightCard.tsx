@@ -29,7 +29,7 @@ export function InsightCard({ article, featured = false }: InsightCardProps) {
         }`}
       >
         <Link
-          href={`/insights/${article.slug}`}
+          href={`/blog/${article.slug}`}
           className="hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
         >
           {article.title}

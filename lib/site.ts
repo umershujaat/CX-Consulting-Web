@@ -22,7 +22,7 @@ export const siteConfig = {
     { label: "Services", href: "/services" },
     { label: "Approach", href: "/approach" },
     { label: "About", href: "/about" },
-    { label: "Insights", href: "/insights" },
+    { label: "Blogs", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ] as const satisfies readonly NavItem[],
   cta: {

@@ -155,14 +155,14 @@ export default function HomePage() {
       </Section>
 
       <Section
-        title="Insights"
+        title="Blogs"
         description="Practical writing on RFPs, evaluations, voice AI, and production readiness."
         tone="muted"
       >
         {latestInsights.length === 0 ? (
           <div className="rounded-lg border border-dashed border-navy/20 bg-white p-6 sm:p-8">
             <p className="text-base font-semibold text-navy">
-              Insights are coming soon
+              Blogs are coming soon
             </p>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate sm:text-base">
               Published articles will appear here automatically.
@@ -176,8 +176,8 @@ export default function HomePage() {
           </div>
         )}
         <p className="mt-6">
-          <Button href="/insights" variant="ghost">
-            View all insights
+          <Button href="/blog" variant="ghost">
+            View all blogs
           </Button>
         </p>
       </Section>

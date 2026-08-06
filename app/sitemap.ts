@@ -7,7 +7,7 @@ const routes = [
   "/services",
   "/approach",
   "/about",
-  "/insights",
+  "/blog",
   "/contact",
   "/privacy",
   "/terms",
@@ -20,14 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = routes.map((path) => ({
     url: `${base}${path === "/" ? "" : path}`,
     lastModified,
-    changeFrequency: (path === "/" || path === "/insights"
+    changeFrequency: (path === "/" || path === "/blog"
       ? "weekly"
       : "monthly") as "weekly" | "monthly",
-    priority: path === "/" ? 1 : path === "/insights" ? 0.8 : 0.7,
+    priority: path === "/" ? 1 : path === "/blog" ? 0.8 : 0.7,
   }));
 
   const articleEntries = getPublishedInsights().map((article) => ({
-    url: `${base}/insights/${article.slug}`,
+    url: `${base}/blog/${article.slug}`,
     lastModified: new Date(`${article.updated ?? article.date}T00:00:00Z`),
     changeFrequency: "monthly" as const,
     priority: 0.6,

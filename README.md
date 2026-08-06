@@ -4,7 +4,7 @@ Enterprise advisory website for AI contact centers, conversational AI, and agent
 
 Working brand name lives in `lib/site.ts` so it can be changed in one place.
 
-## Publishing insights (blog)
+## Publishing blogs
 
 Add a Markdown file under `content/insights/` with front matter:
 
@@ -24,9 +24,9 @@ draft: true
 
 - Set `draft: false` to publish.
 - Drafts never appear in production builds, sitemap, or RSS.
-- Index: `/insights` (also `/blog` redirects here)
-- Article: `/insights/[slug]`
-- RSS: `/insights/rss.xml`
+- Index: `/blog` (`/insights` redirects here)
+- Article: `/blog/[slug]`
+- RSS: `/blog/rss.xml`
 
 ```bash
 npm install
@@ -64,7 +64,7 @@ Never commit `.env` or production secrets. Configure CapRover env vars in the Ca
 
 - Brand, navigation, CTAs, LinkedIn URLs: `lib/site.ts`
 - Marketing copy (problems, services, approach, about, insight seeds): `lib/content.ts`
-- Insights MDX pipeline is planned for Phase 2; the Insights page currently shows a coming-soon state with seed titles only.
+- Blog publishing: add Markdown under `content/insights/` and set `draft: false`.
 
 ## Docker (local production image)
 
