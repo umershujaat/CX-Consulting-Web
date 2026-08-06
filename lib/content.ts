@@ -384,7 +384,7 @@ export const principalProfiles: PrincipalProfile[] = [
   {
     id: "deepak",
     name: "Deepak Dutta",
-    title: "Principal, Enterprise AI & Agentic Applications",
+    title: "General Manager & Global Vice President",
     bio: "Deepak is an enterprise product and customer-engagement executive with more than 25 years of experience. At Meta, he worked across Business Messaging, real-time communications, conversational AI, and agentic business experiences supporting interactions at global scale. His experience also includes leading enterprise AI application portfolios and connecting customer experience, messaging, data, and workflow execution.",
     areasOfDepth: [
       "Enterprise and conversational AI strategy",

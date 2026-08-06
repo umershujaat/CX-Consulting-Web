@@ -57,13 +57,12 @@ export const siteConfig = {
     },
     deepak: {
       name: "Deepak Dutta",
-      title: "Principal, Enterprise AI & Agentic Applications",
+      title: "General Manager & Global Vice President",
       linkedIn: "https://www.linkedin.com/in/deepakdutta1/",
-      /** Prefer photo when available; otherwise PrincipalCard falls back to initials. */
       imageSrc: "/images/deepak-dutta.png",
       imageAlt: "Professional headshot of Deepak Dutta",
       initials: "DD",
-      hasPhoto: false,
+      hasPhoto: true,
     },
   },
 } as const;
